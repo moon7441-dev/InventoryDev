@@ -47,7 +47,7 @@ public class UIMainMenu : MonoBehaviour
 
         textId.text = $"ID : {player.Id}";
         textLevel.text = $"Level : {player.Level}";
-        textGold.text = $"Gold : {player.Gold}";
+        textGold.text = $"{player.Gold:n0} Gold";
     }
 
     #endregion
