@@ -13,17 +13,20 @@ public class Item
     public int Attack { get; private set; }
     public int Defense { get; private set; }
 
+    public Sprite Icon { get; private set; }
+
     #endregion
 
     #region Constructor
 
-    public Item(string name, string description, ItemType type, int attack, int defense)
+    public Item(string name, string description, ItemType type, int attack, int defense, Sprite icon)
     {
         Name = name;
         Description = description;
         Type = type;
         Attack = attack;
         Defense = defense;
+        Icon = icon;
     }
 
     #endregion

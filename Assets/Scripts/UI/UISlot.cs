@@ -13,6 +13,8 @@ public class UISlot : MonoBehaviour
 
     [SerializeField] private Image imageEquippedMark;
 
+    [SerializeField] private Image imageIcon;
+
     [SerializeField] private Button button;
 
     #endregion
@@ -54,6 +56,12 @@ public class UISlot : MonoBehaviour
             textType.text = "";
             textStat.text = "";
 
+            if (imageIcon != null)
+            {
+                imageIcon.sprite = null;
+                imageIcon.enabled = false;
+            }
+
             if (imageEquippedMark != null)
                 imageEquippedMark.gameObject.SetActive(false);
 
@@ -64,6 +72,15 @@ public class UISlot : MonoBehaviour
         textDescription.text = item.Description;
         textType.text = item.Type.ToString();
         textStat.text = $"ATK {item.Attack}, DEF {item.Defense}";
+
+        if (imageIcon != null)
+        {
+            imageIcon.sprite = item.Icon;
+            imageIcon.enabled = (item.Icon != null);
+        }
+
+        if (imageEquippedMark != null)
+            imageEquippedMark.gameObject.SetActive(isEquipped);
 
         if (imageEquippedMark != null)
             imageEquippedMark.gameObject.SetActive(isEquipped);

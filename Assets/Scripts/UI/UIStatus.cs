@@ -38,6 +38,7 @@ public class UIStatus : MonoBehaviour
     public void SetPlayer(Character character)
     {
         player = character;
+
         RefreshUI();
     }
 
@@ -46,7 +47,7 @@ public class UIStatus : MonoBehaviour
         if (player == null) return;
 
         textId.text = $"ID : {player.Id}";
-        textLevel.text = $"Level : {player.Level}";
+        textLevel.text = $"{player.Level}";
         textHP.text = $"HP : {player.BaseMaxHP}"; // 현재 HP 시스템 없으므로 최대치만
         textAttack.text = $"Attack : {player.GetTotalAttack()}";
         textDefense.text = $"Defense : {player.GetTotalDefense()}";

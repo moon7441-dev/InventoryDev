@@ -41,12 +41,12 @@ public class UIMainMenu : MonoBehaviour
         RefreshUI();
     }
 
-    public void RefreshUI()
+    public void RefreshUI(bool isEquipped = false)
     {
         if (player == null) return;
 
         textId.text = $"ID : {player.Id}";
-        textLevel.text = $"Level : {player.Level}";
+        textLevel.text = $"{player.Level}";
         textGold.text = $"{player.Gold:n0} Gold";
     }
 
