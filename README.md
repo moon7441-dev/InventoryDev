@@ -21,9 +21,9 @@ Unity 인벤토리 시스템 구현.
 
 ## Troubleshooting (문제 해결 기록)
 
-Status / Inventory 에 값이 표시되지 않음 :	Canvas가 비활성 상태일 때 SetPlayer가 호출되어 UI가 갱신되지 않음	OnEnable()에서 GameManager.Instance.Player 데이터를 받아 UI를 강제 Refresh하도록 수정	✔ 해결 /n
-슬롯 클릭해도 UI 갱신 안 됨 :	Inventory UI만 갱신되고 Status UI가 갱신되지 않음	OnClickSlot()에서 UIManager.Instance.Status.RefreshUI() 호출 추가	✔ 해결 /n
-UISlot 프리팹이 복제되지만 텍스트가 비어있음	UISlot 프리팹이 Inspector에서 UI 요소가 연결되지 않은 상태	UISlot prefab을 열어 textName, textType, button 연결	✔ 해결 /n
+Status / Inventory 에 값이 표시되지 않음 :	Canvas가 비활성 상태일 때 SetPlayer가 호출되어 UI가 갱신되지 않음	OnEnable()에서 GameManager.Instance.Player 데이터를 받아 UI를 강제 Refresh하도록 수정	✔ 해결 <br />
+슬롯 클릭해도 UI 갱신 안 됨 :	Inventory UI만 갱신되고 Status UI가 갱신되지 않음	OnClickSlot()에서 UIManager.Instance.Status.RefreshUI() 호출 추가	✔ 해결 /n <br />
+UISlot 프리팹이 복제되지만 텍스트가 비어있음	UISlot 프리팹이 Inspector에서 UI 요소가 연결되지 않은 상태	UISlot prefab을 열어 textName, textType, button 연결	✔ 해결 /n <br />
 
 ## 배운 점
 - UI 참조 연결 방식
